@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 15px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 400px;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo de Productos</a>
+        <a href="pedidos.html">Pedidos</a>
+    </nav>
+    <h1>Realiza tu Pedido</h1>
+    <form action="#">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <textarea name="pedido" placeholder="Detalles del pedido" required></textarea>
+        <input type="submit" value="Enviar Pedido">
+    </form>
+</body>
+</html>
