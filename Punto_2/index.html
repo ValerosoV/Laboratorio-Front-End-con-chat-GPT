@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,34 +10,8 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             height: 100vh;
-        }
-        header {
-            background-color: #f4f4f4;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ccc;
-            flex-shrink: 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        header .right {
-            display: flex;
-            align-items: center;
-        }
-        header .right a {
-            margin-left: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
-        .container {
-            display: flex;
-            flex: 1;
+            box-sizing: border-box;
         }
         nav {
             width: 200px;
@@ -44,7 +19,6 @@
             padding: 0;
             border-right: 1px solid #ccc;
             box-sizing: border-box;
-            flex-shrink: 0;
         }
         nav .menu {
             background-color: #17a2b8;
@@ -71,37 +45,71 @@
             color: #333;
             display: block;
         }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            height: 100%;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            flex-shrink: 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        header .right {
+            display: flex;
+            align-items: center;
+        }
+        header .right a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .content-container {
+            flex: 1;
+            display: flex;
+            background-color: #ddd;
+        }
         .main-content {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ddd;
             color: #333;
             font-size: 2rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Panel de Control</h1>
-        <div class="right">
-            <span>Usuario: 😎</span>
-            <a href="#">Salir</a>
-        </div>
-    </header>
-    <div class="container">
-        <nav>
-            <div class="menu">Menú</div>
-            <ul>
-                <li><a href="#" onclick="mostrarContenido('Personas')">Personas</a></li>
-                <li><a href="#" onclick="mostrarContenido('Animales')">Animales</a></li>
-                <li><a href="#" onclick="mostrarContenido('Colores')">Colores</a></li>
-                <li><a href="#" onclick="mostrarContenido('Cosas')">Cosas</a></li>
-            </ul>
-        </nav>
-        <div class="main-content" id="navegacion">
-            Navegación
+    <nav>
+        <div class="menu">Menú</div>
+        <ul>
+            <li><a href="#" onclick="mostrarContenido('Personas')">Personas</a></li>
+            <li><a href="#" onclick="mostrarContenido('Animales')">Animales</a></li>
+            <li><a href="#" onclick="mostrarContenido('Colores')">Colores</a></li>
+            <li><a href="#" onclick="mostrarContenido('Cosas')">Cosas</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <header>
+            <h1>Panel de Control</h1>
+            <div class="right">
+                <span>Usuario: Juan David Valero Vanegas 506221052      grupo-51 </span>
+                <a href="#">Salir</a>
+            </div>
+        </header>
+        <div class="content-container">
+            <div class="main-content" id="navegacion">
+                Navegación
+            </div>
         </div>
     </div>
 
