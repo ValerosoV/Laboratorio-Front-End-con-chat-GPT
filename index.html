@@ -3,37 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Hiper Mercado Frutos de mi Tierra</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             background-color: #f4f4f4;
             color: #333;
         }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        header img {
+            max-width: 50px;
+            max-height: 50px;
+        }
         nav {
-            margin-bottom: 20px;
+            margin: 20px 0;
+            text-align: center;
         }
         a {
             text-decoration: none;
             color: #007bff;
             margin: 0 15px;
         }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 100px); /* Ajusta para tener en cuenta la altura de la cabecera */
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Hiper Mercado Frutos de mi Tierra</h1>
+        <img src="logo.png" alt="Logo del Hiper Mercado">
+    </header>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="catalogo.html">Catálogo de Productos</a>
         <a href="pedidos.html">Pedidos</a>
     </nav>
-    <h1>Bienvenido a nuestro sitio</h1>
-    <p>Explora nuestro catálogo o realiza un pedido.</p>
+    <main>
+        <p>Bienvenido a nuestro sitio. Explora nuestro catálogo o realiza un pedido.</p>
+    </main>
 </body>
 </html>
